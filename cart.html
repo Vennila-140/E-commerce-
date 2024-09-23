@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SwiftCart - Cart</title>
+    <link rel="shortcut icon" href="Images.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body{
+            background-color: rgb(189, 193, 189);
+        }
+        h1{
+            text-align: center;
+            font-size: 50px;
+            font-style: italic;
+            padding-top: 20px;
+        }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #a6a3a3; 
+    color: #333;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    padding: 15px;
+    background-color: #d9d9d9; 
+    border-bottom: 3px solid #b3b3b3; 
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 48px;
+    font-style: italic;
+    color: #333;
+    display: inline-block;
+    animation: fadeIn 2s ease-in-out;
+}
+
+header img {
+    vertical-align: middle;
+    margin-left: 10px;
+    height: 100px;
+    width: 100px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #333;
+    padding: 8px 12px;
+    background-color: #bfbfbf;
+    border-radius: 6px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #e6e6e6; 
+    transform: scale(1.05);
+}
+
+.cart {
+    background-color: #ffffff;
+    padding: 30px;
+    margin-top: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    border-radius: 15px;
+    animation: slideIn 1s ease-in-out;
+}
+
+.cart h2 {
+    text-align: center;
+    color: #808080; 
+    font-size: 34px;
+    margin-bottom: 20px;
+}
+
+.cart table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.cart table th, .cart table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.cart table th {
+    background-color: #d9d9d9;
+    color: #333;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.cart table td {
+    font-size: 16px;
+}
+
+.cart table a {
+    color: #666;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.cart table a:hover {
+    color: #999;
+}
+
+.cart img {
+    width: 100px;
+    border-radius: 10px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.cart img:hover {
+    transform: rotateY(360deg) scale(1.1); 
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.cart-summary {
+    margin-top: 20px;
+    text-align: right;
+    font-size: 20px;
+    color: #333;
+}
+
+.buy-button {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #999999; 
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.buy-button:hover {
+    background-color: #cccccc; 
+    transform: scale(1.05);
+}
+
+footer {
+    margin-top: 50px;
+    text-align: center;
+    padding: 10px;
+    background-color: #d9d9d9; 
+    border-top: 3px solid #b3b3b3;
+}
+
+footer p {
+    font-size: 16px;
+    color: #333;
+}
+
+footer nav ul {
+    display: inline-block;
+    list-style: none;
+    padding: 0;
+}
+
+footer nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+footer nav ul li a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s ease-in-out;
+}
+
+footer nav ul li a:hover {
+    color: #666;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+        
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <h1>SwiftCart <img src="Images.png" alt="" height="150px",width20px></h1>
+    </div> 
+        <nav>
+            <ul>
+                <li><a href="Index.html">Home</a></li>
+                <li><a href="about.Html">about</a></li>
+                <li><a href="Products.Html">Products</a></li>
+                <li><a href="cart.html">cart</a></li>
+                <li><a href="contact.html">contact</a></li>
+            </ul>
+        </nav>
+    </header>
+<div>
+    <img src="a1.png" alt="a1">
+    </div>
+    <section class="cart">
+        <h2>Your Shopping Cart</h2>
+        <form action="checkout.html" method="GET"></form>
+        <table>
+            <tr>
+                <th>Product</th>
+                <th>Quantity</th>
+                <th>Price</th>
+                <th>Total</th>
+                <th>Action</th>
+            </tr>
+            <tr>
+                <td>Mens classic shirt</td>
+                <td>1</td>
+                <td>₹499.89</td>
+                <td>₹499.89</td>
+                <td><a href="#">Remove</a></td>
+            </tr>
+        </table>
+        <div class="cart-summary">
+            <h3>Total:₹499.89</h3>
+            <a href="checkout.html" class="buy-button">Proceed to Checkout</a>
+        </div>
+        <tr>
+            <td>Mosquito net</td>
+            <td>2</td>
+            <td>₹374.99</td>
+            <td>₹374.99</td>
+            <td><a href="#">Remove</a></td>
+        </tr>
+    </table>
+    <div class="cart-summary">
+        <h3>Total: ₹748.99</h3>
+        <a href="checkout.html" class="buy-button">Proceed to Checkout</a>
+    </div>
+    <tr>
+        <td>Classic black crop top</td>
+        <td>1</td>
+        <td>₹269.79</td>
+        <td₹269.79</td>
+        <td><a href="#">Remove</a></td>
+    </tr>
+</table>
+<div class="cart-summary">
+    <h3>Total: ₹269.79</h3>
+    <a href="checkout.html" class="buy-button">Proceed to Checkout</a>
+</div>
+<tr>
+    <td>Black Air Pods</td>
+    <td>1</td>
+    <td>₹999.53</td>
+    <td>₹999.53</td>
+    <td><a href="#">Remove</a></td>
+</tr>
+</table>
+<div class="cart-summary">
+<h3>Total: ₹999.53</h3>
+<a href="checkout.html" class="buy-button">Proceed to Checkout</a>
+</div>
+<tr>
+    <td>Jacket</td>
+    <td>1</td>
+    <td>₹549.45</td>
+    <td>₹549.45</td>
+    <td><a href="#">Remove</a></td>
+</tr>
+</table>
+<div class="cart-summary">
+<h3>Total: ₹549.45</h3>
+<a href="checkout.html" class="buy-button">Proceed to Checkout</a>
+</div>
+<tr>
+    <td>Combo T-shirts</td>
+    <td>1</td>
+    <td>₹675.16</td>
+    <td>₹675.16</td>
+    <td><a href="#">Remove</a></td>
+</tr>
+</table>
+<div class="cart-summary">
+<h3>Total: ₹675.16</h3>
+<a href="checkout.html" class="buy-button">Proceed to Checkout</a>
+</div>
+<tr>
+    <td>Titan luxyry watches</td>
+    <td>1</td>
+    <td>₹1267.99</td>
+    <td>₹1267.99</td>
+    <td><a href="#">Remove</a></td>
+</tr>
+</table>
+<div class="cart-summary">
+<h3>Total: ₹1267.99</h3>
+<a href="checkout.html" class="buy-button">Proceed to Checkout</a>
+</div>
+<tr>
+    <td>crocs slippers</td>
+    <td>1</td>
+    <td>₹756.10</td>
+    <td>₹756.10</td>
+    <td><a href="#">Remove</a></td>
+</tr>
+</table>
+<div class="cart-summary">
+<h3>Total: ₹756.10</h3>
+<a href="checkout.html" class="buy-button">Proceed to Checkout</a>
+</div>
+<tr>
+    <td>fancy women kurtis</td>
+    <td>1</td>
+    <td>₹643.24</td>
+    <td>₹643.24</td>
+    <td><a href="#">Remove</a></td>
+</tr>
+</table>
+<div class="cart-summary">
+<h3>Total: ₹643.24</h3>
+<a href="checkout.html" class="buy-button">Proceed to Checkout</a>
+</div>
+<tr>
+    <td>Wireless mouse</td>
+    <td>1</td>
+    <td>₹489.36</td>
+    <td>₹489.36</td>
+    <td><a href="#">Remove</a></td>
+</tr>
+</table>
+<div class="cart-summary">
+<h3>Total: ₹489.36</h3>
+<a href="checkout.html" class="buy-button">Proceed to Checkout</a>
+</div>
+<tr>
+    <td>Smart watch</td>
+    <td>1</td>
+    <td>₹999.79</td>
+    <td>₹999.79</td>
+    <td><a href="#">Remove</a></td>
+</tr>
+</table>
+<div class="cart-summary">
+<h3>Total: ₹999.79</h3>
+<a href="checkout.html" class="buy-button">Proceed to Checkout</a>
+</div>
+    </section>
+
+    <footer>
+        <hr>
+        <p>&copy; 2024  SwiftCart. All rights reserved.</p>
+        <nav>
+            <ul>
+                <li><a href="#privacy">Privacy Policy</a></li>
+                <li><a href="#terms">Terms of Service</a></li>
+            </ul>
+        </nav>
+        </footer>
+</body>
+</html>

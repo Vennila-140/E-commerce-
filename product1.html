@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SwiftCart - Product 1</title>
+    <link rel="shortcut icon" href="Images.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+<style>
+        body{
+            background-color: rgb(248, 203, 205);
+        }
+        h1{
+            text-align: center;
+            font-size: 50px;
+            font-style: italic;
+            padding-top: 20px;
+        }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(248, 203, 205); 
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 3rem;
+    font-style: italic;
+    color: #fff; 
+    margin-bottom: 20px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+h1 img {
+    vertical-align: middle;
+    margin-left: 10px;
+}
+
+
+nav {
+    background-color: rgba(0, 0, 0, 0.5); 
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffeb3b; 
+}
+
+
+.product-detail {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.product-image, .product-info {
+    flex: 1 1 300px; 
+    margin: 10px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.product-info {
+    background-color: #fff; 
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeInUp 1s ease-out;
+}
+
+.product-info h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.product-info p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.buy-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ffeb3b; 
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.buy-button:hover {
+    background-color: #fdd835; 
+    transform: scale(1.05);
+}
+
+footer {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    text-align: center;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+footer hr {
+    border: 0;
+    border-top: 1px solid #fff;
+    margin: 10px 0;
+}
+
+footer p {
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+footer nav ul {
+    margin-top: 10px;
+    padding: 0;
+}
+
+footer nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+footer nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer nav ul li a:hover {
+    color: #ffeb3b; 
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+</style>
+</head>
+<body>
+    <header>
+        <div>
+        <h1>SwiftCart <img src="Images.png" alt="" height="100px",width80px></h1>
+    </div> 
+        <nav>
+            <ul>
+                <li><a href="Index.html">Home</a></li>
+                <li><a href="about.Html">about</a></li>
+                <li><a href="Products.Html">Products</a></li>
+                <li><a href="cart.html">cart</a></li>
+                <li><a href="contact.html">contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="product-detail">
+        <div class="product-image">
+            <img src="f4.jpg" alt="f4 jpg" height="200px",width200px>
+        </div>
+        <div class="product-info">
+            <h2>Mens classic shirt</h2>
+            <p>₹499.89</p>
+            <p>High quality and affordable.</p>
+            <a href="cart.html" class="buy-button">Add to Cart</a>
+        </div>
+        <div class="product-image">
+            <img src="IMG-20240905-WA0124.jpg" alt="Product 2"height="200px",width200px>
+        </div>
+        <div class="product-info">
+            <h2>Mosquito net</h2>
+            <p>₹374.99</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque, fugit..</p>
+            <a href="cart.html" class="buy-button">Add to Cart</a>
+        </div>
+        <div class="product-image">
+            <img src="IMG-20240905-WA0120.jpg" alt="Product 1"height="200px",width200px>
+        </div>
+        <div class="product-info">
+            <h2>Classic black crop top</h2>
+            <p>₹269.79</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, incidunt..</p>
+            <a href="cart.html" class="buy-button">Add to Cart</a>
+        </div>
+        <div class="product-image">
+            <img src="IMG-20240905-WA0118.jpg" alt="Product 2"height="200px",width200px>
+        </div>
+        <div class="product-info">
+            <h2>Black Air Pods</h2>
+            <p>₹999.53</p>
+            <p>Lorem ipsum dolor sit amet consectetur.</p>
+            <a href="cart.html" class="buy-button">Add to Cart</a>
+        </div>
+        <div class="product-image">
+            <img src="IMG-20240905-WA0119.jpg" alt="Product 1"height="200px",width200px>
+        </div>
+        <div class="product-info">
+            <h2>Jacket</h2>
+            <p>₹549.45</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
+            <a href="cart.html" class="buy-button">Add to Cart</a>
+        </div>
+        <div class="product-image">
+            <img src="IMG-20240905-WA0121.jpg" alt="Product 1"height="200px",width200px>
+        </div>
+        <div class="product-info">
+            <h2>Combo T-shirts</h2>
+            <p>₹675.16</p>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <a href="cart.html" class="buy-button">Add to Cart</a>
+        </div>
+        <div class="product-image">
+            <img src="IMG-20240905-WA0122.jpg" alt="Product 1"height="200px",width200px>
+        </div>
+        <div class="product-info">
+            <h2>Titan luxyry watches</h2>
+            <p>₹1267.99</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+            <a href="cart.html" class="buy-button">Add to Cart</a>
+        </div>
+        <div class="product-image">
+            <img src="IMG-20240905-WA0123.jpg" alt="Product 1"height="200px",width200px>
+        </div>
+        <div class="product-info">
+            <h2>crocs slippers</h2>
+            <p>₹756.10</p>
+            <p>Lorem ipsum dolor sit amet..</p>
+            <a href="cart.html" class="buy-button">Add to Cart</a>
+        </div>
+        <div class="product-image">
+            <img src="IMG-20240905-WA0125.jpg" alt="Product 1"height="200px",width200px>
+        </div>
+        <div class="product-info">
+            <h2>fancy women kurtis</h2>
+            <p>₹643.24</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, nisi..</p>
+            <a href="cart.html" class="buy-button">Add to Cart</a>
+        </div>
+        <div class="product-image">
+            <img src="IMG-20240905-WA0126.jpg" alt="Product 1"height="200px",width200px>
+        </div>
+        <div class="product-info">
+            <h2>Wireless mouse</h2>
+            <p>₹489.36</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel, veritatis..</p>
+            <a href="cart.html" class="buy-button">Add to Cart</a>
+        </div>
+        <div class="product-image">
+            <img src="IMG-20240905-WA0127.jpg" alt="Product 1"height="200px",width200px>
+        </div>
+        <div class="product-info">
+            <h2>Smart watch</h2>
+            <p>₹999.79</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio.</p>
+            <a href="cart.html" class="buy-button">Add to Cart</a>
+        </div>
+    </section>
+    <footer>
+        <hr>
+        <p>&copy; 2024  SwiftCart. All rights reserved.</p>
+        <nav>
+            <ul>
+                <li><a href="#privacy">Privacy Policy</a></li>
+                <li><a href="#terms">Terms of Service</a></li>
+            </ul>
+        </nav>
+        </footer>
+</body>
+</html>
